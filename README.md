@@ -21,7 +21,7 @@ To evaluate the answer quality, GPT-4 is prompted to rank the answers of the dif
 
 ### Task Type
 
-Fine-Tuning a Chatbot
+LLM Fine-Tuning
 
 ### Results Summary
 
