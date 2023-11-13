@@ -1,16 +1,27 @@
-# [Your Project Title Here]
+# Educational Helpfulness Assistant
 
 ## Repository Link
 
-[https://github.com/your_username/your_project_name]
+[https://github.com/steffen74/edu-assistant]
 
 ## Description
 
-[Short project description here. Briefly summarize the problem you are trying to solve and the approach you're taking.]
+The Zephyr-7B-α model (Hugging Face, 2023) is fine-tuned via training data generated according to the Constitutional AI approach. Hereby, the model is requested to critique its generated answers and generate improved answers. The new data is then used for further fine-tuning. A set of 1000 questions on physics and history with difficulty levels ranging from Kindergarten to 12th grade is generated using GPT-4 (OpenAI, 2023b). On each of these, fifteen different critique and revision prompt pairs like the following are applied:
+
+#### Critique
+
+> Point out instances where the assistant's last response directly provided the answer or did not guide the student through a learning process in a Socratic manner.
+
+#### Revision
+
+> Please rewrite the assistant's response to follow a Socratic style of questioning, aimed at guiding the student to think for themselves.
+
+For a baseline comparison answers of OpenAI’s GPT-3.5 and GPT-4 default models are used with custom prompts soliciting an educational helpful, Socratic style answer as proposed by OpenAI (OpenAI, 2023a, 2023b).
+To evaluate the answer quality, GPT-4 is prompted to rank the answers of the different models for a given question according to the rules defined by the prompt to generate the training data. Additionally, a qualitative review is conducted by educational experts to provide further insights.
 
 ### Task Type
 
-[Image Classification / Chatbot / Regression / Clustering / Other]
+Fine-Tuning a Chatbot
 
 ### Results Summary
 
